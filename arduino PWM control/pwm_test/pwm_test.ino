@@ -4,7 +4,7 @@
 unsigned short pin = 9;
 
 signed int dutyCycle = 0; 
-unsigned int highus = 1500;
+unsigned int highus = 1600;
 unsigned int lowus = 1000;
 
 void setup() {

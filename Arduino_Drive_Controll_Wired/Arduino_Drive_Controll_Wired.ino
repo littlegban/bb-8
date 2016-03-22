@@ -4,17 +4,19 @@
 
 ArduinoNunchuk nunchuk = ArduinoNunchuk();
 
-unsigned short driveL = 9;
-unsigned short driveR = 10;
+unsigned short left = 9;
+unsigned short right = 10;
+unsigned short rotate = 11;
 
-signed int dutyCycle = 0;
-unsigned int highus = 1500;
+signed int dutyCycle = 0; 
+unsigned int highus = 1600;
+unsigned int highus1 = 1600;
 unsigned int lowus = 1000;
 
 void setup()
 {
-  pinMode(driveL, OUTPUT);
-  pinMode(driveR, OUTPUT);
+  pinMode(left, OUTPUT); 
+  digitalWrite(left, LOW);
   Serial.begin(19200);
   nunchuk.init();
 }
@@ -39,9 +41,13 @@ void loop()
     Serial.print("LEFT");  
   }
   else if (nunchuk.analogY > 135) {
-    Serial.print("FORWARD");  
+    Serial.print("FORWARD");
+    digitalWrite(left, HIGH);
+    delayMicroseconds(highus);
+    digitalWrite(left, LOW);
+    delayMicroseconds(lowus);
   }
-  else if (nunchuk.analogY < 134) {
+  else if (nunchuk.analogY < 134 ) {
     Serial.print("BACKWARDS");
   }
   else if (nunchuk.zButton > 0) {

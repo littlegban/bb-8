@@ -4,20 +4,26 @@
 
     <item
         android:id="@+id/secure_connect_scan"
-        android:orderInCategory="100"
+        android:orderInCategory="200"
         android:showAsAction="never"
         android:title="Connect"/>
 
     <item
         android:id="@+id/insecure_connect_scan"
-        android:orderInCategory="200"
+        android:orderInCategory="300"
         android:showAsAction="never"
         android:title="Disconnect"/>
 
     <item
         android:id="@+id/discoverable"
-        android:orderInCategory="300"
+        android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="Discoverable"/>
+        android:title="Make Discoverable"/>
+
+    <item
+        android:id="@+id/devicesAvalable"
+        android:orderInCategory="500"
+        android:showAsAction="never"
+        android:title="Devices Avalable" />
     
 </menu>

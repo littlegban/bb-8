@@ -9,31 +9,51 @@
     tools:context="com.enarch.bb8.MainActivity" >
 
     <Button
-        android:id="@+id/sound1"
+        android:id="@+id/maybe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Sound One" />
+        android:text="Maybe" />
 
     <Button
-        android:id="@+id/sound2"
+        android:id="@+id/yohoo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/sound1"
-        android:layout_alignBottom="@+id/sound1"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="22dp"
-        android:text="Sound Two" />
+        android:layout_toRightOf="@+id/maybe"
+        android:text="Yohoo" />
 
     <Button
-        android:id="@+id/sound3"
+        android:id="@+id/yes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/sound1"
-        android:layout_below="@+id/sound1"
-        android:layout_marginTop="56dp"
-        android:text="Sound Three" />
-    
+        android:layout_toRightOf="@+id/yohoo"
+        android:text="Yes" />
+
+    <Button
+        android:id="@+id/giddy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/yes"
+        android:text="Giddy" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/giddy"
+        android:text="No" />
+
+    <Button
+        android:id="@+id/frustrated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/no"
+        android:text="frustrated" />
+
+    <TextView
+        android:id="@+id/bluetoothstate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/maybe"
+        android:layout_alignParentBottom="true" />
     
 </RelativeLayout>

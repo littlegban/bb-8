@@ -25,12 +25,17 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int discoverable=0x7f080005;
-        public static final int insecure_connect_scan=0x7f080004;
-        public static final int secure_connect_scan=0x7f080003;
-        public static final int sound1=0x7f080000;
-        public static final int sound2=0x7f080001;
-        public static final int sound3=0x7f080002;
+        public static final int bluetoothstate=0x7f080006;
+        public static final int devicesAvalable=0x7f08000a;
+        public static final int discoverable=0x7f080009;
+        public static final int frustrated=0x7f080005;
+        public static final int giddy=0x7f080003;
+        public static final int insecure_connect_scan=0x7f080008;
+        public static final int maybe=0x7f080000;
+        public static final int no=0x7f080004;
+        public static final int secure_connect_scan=0x7f080007;
+        public static final int yes=0x7f080002;
+        public static final int yohoo=0x7f080001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

@@ -7,9 +7,9 @@
 
 // Connections to joystick (change if you use different pins):
 
-const int VERT = 0; // analog
-const int HORIZ = 1; // analog
-const int SEL = 31; // digital
+const int VERT = 0; // 1 525/526 1021 -- Analog Pin 0
+const int HORIZ = 1; // 1 499/498 1021 -- Analog Pin 1
+const int SEL = 31; //Digital Pin 30
 
 // Also connect the joystick VCC to Arduino 5V, and joystick GND to Arduino GND.
 

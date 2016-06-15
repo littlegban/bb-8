@@ -4,12 +4,14 @@
 unsigned short pin = 9;
 
 signed int dutyCycle = 0; 
-unsigned int highus = 1600;
+unsigned int highus = 1500;
 unsigned int lowus = 1000;
 
 void setup() {
  pinMode(pin, OUTPUT); 
+ pinMode(8, OUTPUT);
  digitalWrite(pin, LOW);
+ digitalWrite(8, HIGH);
  Serial.begin(9600);
 }
 

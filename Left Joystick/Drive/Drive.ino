@@ -9,12 +9,6 @@ void setup()
 {
   // make the SEL line an input
   pinMode(SEL, INPUT);
-
-  //Test LEDS
-  pinMode(13, OUTPUT);
-  pinMode(14, OUTPUT);
-  pinMode(15, OUTPUT);
-  pinMode(16, OUTPUT);
   //End Test LEDS
 
 
@@ -33,21 +27,9 @@ void loop()
   horizontal = analogRead(HORIZ); // will be 0-1023
   select = digitalRead(SEL); // will be HIGH (1) if not pressed, and LOW (0) if pressed
 
-
-  if (VERT < 500) {
-    digitalWrite(13, HIGH);
-  }
-
-  else if (VERT > 500) {
-    digitalWrite(14, HIGH);
-  }
-
-  else if (HORIZ < 500) {
-    digitalWrite(15, HIGH);
-  }
-
-  else if (HORIZ >500) {
-    digitalWrite(16, HIGH);
-  }
+  Serial.Write(',');
+  Serial.Write(vertical);
+  Serial.Write('|');
+  Serial.Write(horizontal);
 
 }  

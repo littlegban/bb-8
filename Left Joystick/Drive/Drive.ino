@@ -8,7 +8,16 @@ const int SEL = 3; //Digital Pin 30
 void setup()
 {
   // make the SEL line an input
-  pinMode(SEL,INPUT);
+  pinMode(SEL, INPUT);
+
+  //Test LEDS
+  pinMode(13, OUTPUT);
+  pinMode(14, OUTPUT);
+  pinMode(15, OUTPUT);
+  pinMode(16, OUTPUT);
+  //End Test LEDS
+
+
   // turn on the pull-up resistor for the SEL line (see http://arduino.cc/en/Tutorial/DigitalPins)
   //digitalWrite(SEL,HIGH);
 
@@ -23,6 +32,22 @@ void loop()
   vertical = analogRead(VERT); // will be 0-1023
   horizontal = analogRead(HORIZ); // will be 0-1023
   select = digitalRead(SEL); // will be HIGH (1) if not pressed, and LOW (0) if pressed
-  
+
+
+  if (VERT < 500) {
+    digitalWrite(13, HIGH);
+  }
+
+  else if (VERT > 500) {
+    digitalWrite(14, HIGH);
+  }
+
+  else if (HORIZ < 500) {
+    digitalWrite(15, HIGH);
+  }
+
+  else if (HORIZ >500) {
+    digitalWrite(16, HIGH);
+  }
 
 }  

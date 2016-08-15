@@ -1,22 +1,6 @@
-#include "FastLED.h"
-#include "definitions.h"
-#define NUM_LEDS 12
-CRGB leds[NUM_LEDS];
+#ifndef definitions_h
+#define definitions_h
 
-void setup() {
-  FastLED.addLeds<WS2801, RGB>(leds, NUM_LEDS);
-}
-
-void loop() {
-  PSI();
-  HP();
-  eye();
-  logicOne();
-  logicTwo();
-  logicThree();
- 
-  FastLED.show();
-}
 
 void PSI() {
   leds[0] = CRGB::White;
@@ -48,3 +32,5 @@ void logicThree() {
   leds[11] = CRGB::Blue;
   leds[12] = CRGB::Blue;
 }
+
+#endif
